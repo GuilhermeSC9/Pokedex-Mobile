@@ -11,7 +11,7 @@ type RootStackParamList = {
   PokemonPage: {pokemon:Pokemon}
 }
 
-const Stack = createStackNavigator()
+const Stack = createStackNavigator<RootStackParamList>()
 
 export default function App() {
   return (

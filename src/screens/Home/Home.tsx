@@ -31,13 +31,12 @@ export function Home() {
             front_default: response.data.sprites.front_default,
             front_shiny: response.data.sprites.shiny_default
           },
-          types: response.data.types.map((type: PokemonTypes) =>{
-            slot: type.slot;
+          types: response.data.types.map((type: PokemonTypes) =>({
+            slot: type.slot,
             type: {
               name: type.type.name}
-          })
+          }))
         }
-        console.log(pokemonData)
 
         setPokemonList(prevState => [...prevState , pokemonData]);
         }
